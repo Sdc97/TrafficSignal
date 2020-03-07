@@ -44,6 +44,6 @@ always @(posedge clk) begin
 	end
 end
 
-assign timer = (same >= 'd1) ? 'd1 : 'd0;
+assign timer = (same == 'd1) ? 'd1 : 'd0;
 
 endmodule
