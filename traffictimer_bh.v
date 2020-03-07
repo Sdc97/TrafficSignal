@@ -25,8 +25,8 @@ module traffictimer_bh#(
  output wire timer ,
  input wire clk ,
  input wire reset,
- input [NBITS:0] cnt_ini ,
- input [NBITS:0] cnt_rst
+ input [NBITS-1:0] cnt_ini ,
+ input [NBITS-1:0] cnt_rst
 );
 integer i = 0;
 integer same = 0;

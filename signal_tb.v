@@ -26,6 +26,7 @@ module signal_tb;
 
 	// Inputs
 	reg clk;
+	reg b;
 	
 	// Outputs
 	wire Ago;
@@ -35,22 +36,27 @@ module signal_tb;
 
 	// Instantiate the Unit Under Test (UUT)
 	signal_vm uut (
+		.b(b),
 		.clk(clk), 
 		.Ago(Ago), 
 		.Astop(Astop), 
 		.Bgo(Bgo), 
 		.Bstop(Bstop)
 	);
-
+	
 	initial begin
 		// Initialize Inputs
+		b = 0;
 		clk = 0;
-
+		
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
-			
+		#250
+		b = 1;
+		#200
+		b = 0;
 	end
    
 	always begin 
