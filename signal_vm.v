@@ -61,7 +61,7 @@ localparam Cstart = 4'b0111;
 localparam Cwait = 4'b1000;
 localparam Cinit = 4'b1001;
 
-always @(posedge clk) begin
+always @(negedge clk) begin
 	//cnt_rst = (crossing) ? 32'h2FAF080 : 32'h1C9C380;
 //$display(current_state);
 	case(current_state)
@@ -77,7 +77,7 @@ always @(posedge clk) begin
 			next_state = Ainit;
 		end
 		Ainit: begin
-			cnt_rst = 32'h1C9C380;
+			cnt_rst = 32'h3938700;//1C9C380;
 			if(crossing == 0 & b == 1)
 				crossing = 1;
 			Ago = 1'b1;
@@ -118,7 +118,7 @@ always @(posedge clk) begin
 			end
 		end
 		Binit: begin
-			cnt_rst = 32'h1C9C380;
+			cnt_rst = 32'h3938700;//1C9C380;
 			if(crossing == 0 & b == 1)
 				crossing = 1;
 			Ago = 1'b0;
@@ -159,7 +159,7 @@ always @(posedge clk) begin
 		Cinit: begin
 			$display("now allowing corssing...");
 			crossing = 0;
-			cnt_rst = 32'h2FAF080;
+			cnt_rst = 32'h5F5E100;
 			Ago = 1'b0;
 			Bgo = 1'b0;
 			Astop = 1'b1;
