@@ -44,7 +44,7 @@ end
 
 //Combinatorial logic
 assign cnt_ini = 32'h0000;
-assign cnt_rst = 32'h20; //FE502B; // 3 secs
+assign cnt_rst = 32'h1C9C380; // 3 secs
 
 //FSM
 localparam INIT = 3'b000;
@@ -55,7 +55,8 @@ localparam Bstart = 3'b100;
 localparam Bwait = 3'b101;
 localparam Binit = 3'b110;
 
-always @(current_state) begin
+always @(posedge clk) begin
+//$display(current_state);
 	case(current_state)
 		INIT: begin
 			Ago = 1'b0;
@@ -87,6 +88,8 @@ always @(current_state) begin
 			Astop = 1'b0;
 			Bstop = 1'b1;
 			reset = 1'b0;
+			//$display("Timer is ");
+			//$display(timer);
 			if(timer == 0)
 				next_state = Await;
 			else
@@ -126,7 +129,7 @@ always @(current_state) begin
 	endcase
 end
 
-timer_st #( .NBITS(NBITS) ) timerst (
+traffictimer_bh #( .NBITS(NBITS) ) timerst (
 .timer(timer),
 .clk(clk),
 .reset(reset) ,

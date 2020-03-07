@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module adder #( parameter NBITS = 16 )(
+module adder #( parameter NBITS = 32 )(
 input [NBITS-1:0] q ,
 input [NBITS-1:0] cnt_ini ,
 input [NBITS-1:0] cnt_rst ,
@@ -49,4 +49,5 @@ comparator (
 // -----------------------------------------------------------------
 assign tick = (same) ? 'd1 : 'd0 ;
 assign nextq = (same) ? cnt_ini : inextq ;
+
 endmodule

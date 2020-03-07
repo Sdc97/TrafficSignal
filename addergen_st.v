@@ -1,4 +1,4 @@
-module addergen_st #( parameter NBITS = 16 )(
+module addergen_st #( parameter NBITS = 32 )(
 output wire[NBITS-1:0] r ,
 output wire cout ,
 input wire[NBITS-1:0] a ,

@@ -30,7 +30,11 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="adder_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="signal_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="signal_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="signal_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="signal_tb_stx_beh.prj"/>
@@ -44,6 +48,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="signal_vm.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="signal_vm_envsettings.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="signal_vm_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="signal_vm_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="signal_vm_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="signal_vm_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="timer_st.bgn" xil_pn:subbranch="FPGAConfiguration"/>
@@ -86,6 +91,8 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="timer_st_xst.xrpt"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="timer_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="timer_tb_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="traffictimer_bh_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="traffictimer_bh_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -99,13 +106,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1583474765" xil_pn:in_ck="-2142263978251373621" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1583474765">
+    <transform xil_pn:end_ts="1583539700" xil_pn:in_ck="7082628957611625016" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1583539699">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="adder.v"/>
       <outfile xil_pn:name="addergen_st.v"/>
       <outfile xil_pn:name="comparatorgen_st.v"/>
@@ -114,12 +117,13 @@
       <outfile xil_pn:name="signal_vm.v"/>
       <outfile xil_pn:name="timer_st.v"/>
       <outfile xil_pn:name="timer_tb.v"/>
+      <outfile xil_pn:name="traffictimer_bh.v"/>
     </transform>
-    <transform xil_pn:end_ts="1583473146" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1095377605402083005" xil_pn:start_ts="1583473146">
+    <transform xil_pn:end_ts="1583539569" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1095377605402083005" xil_pn:start_ts="1583539569">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1583473146" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2474735192272803451" xil_pn:start_ts="1583473146">
+    <transform xil_pn:end_ts="1583539569" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2474735192272803451" xil_pn:start_ts="1583539569">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -127,14 +131,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1583474765" xil_pn:in_ck="-2142263978251373621" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1583474765">
+    <transform xil_pn:end_ts="1583539700" xil_pn:in_ck="7082628957611625016" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1583539700">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="adder.v"/>
       <outfile xil_pn:name="addergen_st.v"/>
       <outfile xil_pn:name="comparatorgen_st.v"/>
@@ -143,22 +142,23 @@
       <outfile xil_pn:name="signal_vm.v"/>
       <outfile xil_pn:name="timer_st.v"/>
       <outfile xil_pn:name="timer_tb.v"/>
+      <outfile xil_pn:name="traffictimer_bh.v"/>
     </transform>
-    <transform xil_pn:end_ts="1583474767" xil_pn:in_ck="-2142263978251373621" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3370986412220044590" xil_pn:start_ts="1583474765">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1583539702" xil_pn:in_ck="7082628957611625016" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3370986412220044590" xil_pn:start_ts="1583539700">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="signal_tb_beh.prj"/>
+      <outfile xil_pn:name="signal_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1583474549" xil_pn:in_ck="565834694326837270" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8855266794274323887" xil_pn:start_ts="1583474549">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1583539702" xil_pn:in_ck="-4472076973364037074" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8855266794274323887" xil_pn:start_ts="1583539702">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForced"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="signal_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1583467645" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1583467645">
@@ -169,7 +169,6 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 

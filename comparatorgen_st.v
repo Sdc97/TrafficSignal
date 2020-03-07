@@ -1,4 +1,4 @@
-module comparatorgen_st #( parameter NBITS = 16 )(
+module comparatorgen_st #( parameter NBITS = 32 )(
 output wire r ,
 input wire[NBITS-1:0] a ,
 input wire[NBITS-1:0] b );
