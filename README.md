@@ -12,7 +12,23 @@ One primary design constraint we encountered was that the timer used in Lab 6 co
 
 ## System Design, Architecture, and Performance.
 ### HLSM
-![](photos/Firstsim.PNG)
+![](photos/HLSM.png)  
+The HLSM of our design ensures that there are no race conditions between inputs externally and the inputs coming from the datapath. The extended states permit each signal time to reset the current value in the datapath, to make sure the value in the datapath is completely reset before it reaching the waiting state, that iterates until the counter has reached the terminal value.
+
+### Datapath
+![](photos/datapath.png)  
+The datapath is comprised of an adder and a comparator, as well as three registers to hold internal values, one to hold the initial value, another to hold the terminal value, and another to hold the current value of the counter. At each clock pulse while the reset is 0, the internal counter will be incremented by 1 with the adder, then compared against the terminal value to test if the output timer should be 1.
+
+### FSM
+![](photos/FSM.png)  
+The FSM closely follows our HLSM, but only with 3 (6 actually) states based on the external inputs and the inputs from the datapath. The reset is 0 at all states, to enable counting, and the reset is 1 between state transitions.(With technical init states that reset the value in the datapath.)
+
+### Verilog Code
+See attached documents for all verilog code.
+
+### Simulation
+![](photos/Firstsim.PNG)  
+In this waveform, b is pressed early on in the cycle for A, and transitions to the C state once the three seconds for A are up. After 5 seconds with both streetlights red, the cycle continues to state B where Bgo is on, and Astop is on. The cycle between A and B continues unless the button is pressed, or the circuit is powered off.
 
 ## Difficulties and issues
 
